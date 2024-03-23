@@ -1268,12 +1268,12 @@ header .container.active .toggle span:nth-child(3) {
 /*---------------------------------------------------
          Dora Testimonial Section css                   
 ---------------------------------------------------*/
+
 .feedback-section {
   padding: 0 0 100px;
   background: #fafbfd;
   display: flex;
   flex-direction: column;
-  
 }
 
 .feedback-section .feedback-section-title-cont {
@@ -1289,202 +1289,106 @@ header .container.active .toggle span:nth-child(3) {
   display: flex;
   flex-direction: column;
   align-items: center;
-  
-
-  /* padding: 20px; */
-  margin-left: auto; 
-  margin-right: auto; /
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%; /* Responsive width */
+  max-width: 800px; /* Max width for larger screens */
+  background: #fafbfd;
 }
 
-
-
-.feedback-section .feedback-item .feedback-active-img {
-  margin-right: 20px;
-  max-width: 20px;
+.feedback-section .feedback-item .feedback-active-img img, 
+.feedback-section .feedback-item .feedback-info-cont .feedback-person-info .feedback-person-img img {
+  height: 10%; 
+  max-width: 10%;
   border-radius: 50%;
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 40%;
-  flex: 0 0 20%;
 }
 
-
-@media only screen and (max-width: 575.98px) {
-  .feedback-section .feedback-section-title-cont {
-    display: block;
-  }
-  .feedback-section .feedback-section-title-cont .section_title {
-    max-width: 100%;
-  }
-  .feedback-section .feedback-section-title-cont .feedback-btn-cont {
-    padding-top: 20px;
-  }
-}
 .feedback-section .feedback-btn-cont {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   gap: 20px;
 }
-.feedback-section .feedback-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 800px;
-  background: #fafbfd;
-}
-.feedback-section .feedback-item .feedback-active-img {
-  margin-right: 20px;
-  max-width: 300px;
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 40%;
-  flex: 0 0 40%;
-}
+
 @media only screen and (max-width: 650px) {
-  .feedback-section .feedback-item .feedback-active-img {
-    display: none;
+  .feedback-section .feedback-item .feedback-active-img, 
+  .feedback-section .feedback-item .feedback-info-cont .feedback-person-info .feedback-person-img {
+    width: 20px; /* Set fixed width for large screens */
+    height: 20px; /* Set fixed height for large screens */
+  }
+
+  .feedback-section .feedback-item .feedback-active-img img, 
+  .feedback-section .feedback-item .feedback-info-cont .feedback-person-info .feedback-person-img img {
+    object-fit: cover; /* Ensures the image covers the 20x20 area without distortion */
+  }
+  
+  .feedback-section .feedback-section-title-cont, 
+  .feedback-section .feedback-section-title-cont .section_title, 
+  .feedback-section .feedback-section-title-cont .feedback-btn-cont {
+    display: block; /* Stack elements vertically */
+  }
+  
+  .feedback-section .feedback-item {
+    padding: 0 15px; /* Adds padding on small screens */
+  }
+  
+  .feedback-section .feedback-item .feedback-info-cont .feedback-txt,
+  .feedback-section .feedback-item .feedback-info-cont .feedback-person-info h4,
+  .feedback-section .feedback-item .feedback-title-cont h3 {
+    font-size: 16px; /* Smaller font size for readability on small screens */
   }
 }
-.feedback-section .feedback-item .feedback-active-img img {
-  height: 100%;
-  max-width: 100%;
-}
-.feedback-section .feedback-item .feedback-info-cont {
-  padding: 10px;
-}
+
 .feedback-section .feedback-item .feedback-info-cont .feedback-txt {
   padding: 15px 0 20px;
 }
+
 .feedback-section .feedback-item .feedback-info-cont .feedback-person-info {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   gap: 15px;
 }
 
-
-
-.feedback-section .feedback-item .feedback-active-img {
-  width: 70px; 
-  height: 70px; 
-  border-radius: 50%;
-  overflow: hidden; 
-  margin-right: 20px;
-}
-
-@media only screen and (max-width: 650px) {
-  .feedback-section
-    .feedback-item
-    .feedback-info-cont
-    .feedback-person-info
-    .feedback-person-img {
-    display: block;
-  }
-}
-.feedback-section
-  .feedback-item
-  .feedback-info-cont
-  .feedback-person-info
-  .feedback-person-img
-  img {
-  width: 40%;
-  height: 40%;
-  border-radius: 50%;
-}
 .feedback-section .feedback-item .feedback-info-cont .feedback-person-info h4 {
   font-weight: 600;
   font-size: 20px;
   line-height: 28px;
   color: #15295f;
 }
-@media only screen and (max-width: 650px) {
-  .feedback-section
-    .feedback-item
-    .feedback-info-cont
-    .feedback-person-info
-    h4 {
-    font-size: 18px;
-    line-height: 1.3;
-  }
-}
-.feedback-section
-  .feedback-item
-  .feedback-info-cont
-  .feedback-person-info
-  .feedback-star-cont {
+
+.feedback-section .feedback-item .feedback-info-cont .feedback-person-info .feedback-star-cont {
   margin-top: 8px;
 }
-.feedback-section
-  .feedback-item
-  .feedback-info-cont
-  .feedback-person-info
-  .feedback-star-cont
-  ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 3px;
-}
-.feedback-section
-  .feedback-item
-  .feedback-info-cont
-  .feedback-person-info
-  .feedback-star-cont
-  ul
-  li {
+
+.feedback-section .feedback-item .feedback-info-cont .feedback-person-info .feedback-star-cont ul li {
   width: 20px;
   height: 20px;
 }
-.feedback-section
-  .feedback-item
-  .feedback-info-cont
-  .feedback-person-info
-  .feedback-star-cont
-  ul
-  li
-  img {
-  width: 100%;
-  height: 100%;
+
+.feedback-section .feedback-item .feedback-info-cont .feedback-person-info .feedback-star-cont ul li img {
+  width: 30%;
+  height: 30%;
 }
+
 .feedback-section .feedback-item .feedback-title-cont {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
-.feedback-section .feedback-item .feedback-title-cont .feedback-title-element {
-  width: 30px;
-  height: 50px;
-}
-.feedback-section
-  .feedback-item
-  .feedback-title-cont
-  .feedback-title-element
-  img {
-  max-width: 100%;
-}
+
 .feedback-section .feedback-item .feedback-title-cont h3 {
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 31px;
-  color: #15295f;
+  margin-right: 20px;
+  max-width: 300px;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 40%;
+  flex: 0 0 40%;
 }
+
 @media only screen and (max-width: 650px) {
   .feedback-section .feedback-item .feedback-title-cont h3 {
-    font-size: 20px;
-    line-height: 1.3;
+    font-size: 20px; /* Adjusts title font size for small screens */
   }
 }
+
 
 /* -----------------------------------------------
                      Timeline
