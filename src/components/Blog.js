@@ -25,7 +25,7 @@ const Blog = () => {
                <div className='timeline-job'> 
                  <h3>{data.jobTitle}</h3>
                  <div>
-                  <p><strong>startDate</strong> : {data.startDate}</p>
+                  <p><strong>StartDate</strong> : {data.startDate}</p>
                   <p><strong>EndDate</strong> : {data.endDate}</p>
                  </div>
               </div>

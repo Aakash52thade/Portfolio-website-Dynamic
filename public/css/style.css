@@ -1548,7 +1548,7 @@ header .container.active .toggle span:nth-child(3) {
     flex-direction: column; 
     align-items: center;
     justify-content: center;
-    padding: 0px 20px;
+    padding: 0px 30px;
   }
 
   .timeline-job{
@@ -1564,7 +1564,7 @@ header .container.active .toggle span:nth-child(3) {
 /* Media Query for screen widths less than or equal to 650px */
 @media only screen and (max-width: 650px) {
   .timeline-experience > div {
-    width: calc(50% - 20px); 
+    width: calc(70% - 20px); 
   }
   .timeline-job{
     flex-direction: column;
@@ -1573,31 +1573,13 @@ header .container.active .toggle span:nth-child(3) {
   .timeline-experience {
     flex-direction: column;
     align-items: center;
-    padding: 0px 20px;
+    padding: 0px 27px;
     justify-content: center;
   }
 
 }
 
-/* Additional Media Query for screen widths less than or equal to 480px */
-@media only screen and (max-width: 480px) {
-  .timeline-container {
-    padding: 0 20px; 
-  }
 
-  .timeline-job{
-    flex-direction: column;
-  }
-
-  .timeline-experience {
-    flex-direction: column; 
-    align-items: center;
-    padding: 0px 20px;
-    justify-content: center;
-  }
-
-  
-}
 
 
 
@@ -1617,6 +1599,8 @@ header .container.active .toggle span:nth-child(3) {
 @media only screen and (max-width: 767.98px) {
   .contact-section .contact-info {
     display: block;
+    margin-left: 27%;
+    max-width: 80%;
   }
 
   .contact-social {
@@ -1635,6 +1619,8 @@ header .container.active .toggle span:nth-child(3) {
     display: block;
     gap: unset; 
   }
+
+ 
 }
 
 @media only screen and (max-width: 991.97px) {
